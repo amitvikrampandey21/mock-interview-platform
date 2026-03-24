@@ -1,0 +1,21 @@
+{
+  "name": "ai-mock-interview-hiring-platform",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:web\"",
+    "dev:web": "npm --workspace @aimih/web run dev",
+    "dev:api": "npm --workspace @aimih/api run dev",
+    "build:web": "npm --workspace @aimih/web run build",
+    "build:api": "npm --workspace @aimih/api run build",
+    "lint": "npm run lint --workspaces",
+    "typecheck": "npm run typecheck --workspaces"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
